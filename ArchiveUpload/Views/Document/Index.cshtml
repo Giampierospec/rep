@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ArchiveUpload.Models.Documento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo Documento", "")
+</p>
+<table class="table table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Archivo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @item.Descripcion
+        </td>
+        <td>
+            @Html.ActionLink(item.Archivo.ToString(), "DownloadDoc", "Document", new { id = item.Id },null)
+        </td>
+    </tr>
+}
+
+</table>
