@@ -26,5 +26,6 @@ namespace ArchiveUpload.Models
         }
     
         public virtual DbSet<Documento> Documentos { get; set; }
+        public virtual DbSet<docs2> docs2 { get; set; }
     }
 }

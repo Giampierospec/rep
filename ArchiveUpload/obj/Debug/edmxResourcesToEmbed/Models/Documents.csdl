@@ -11,5 +11,13 @@
   </EntityType>
   <EntityContainer Name="DocContext" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Documentos" EntityType="Self.Documento" />
+    <EntitySet Name="docs2" EntityType="DocsModel.docs2" />
   </EntityContainer>
+  <EntityType Name="docs2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

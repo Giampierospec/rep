@@ -10,5 +10,7 @@ namespace ArchiveUpload.Repository
     {
         List<Documento> GetAllDocumentos();
         void InsertDocumento(Documento doc);
+        List<docs2> GetAllDocu();
+        void InsertDocu(docs2 doc);
     }
 }

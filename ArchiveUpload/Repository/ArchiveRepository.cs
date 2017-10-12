@@ -38,5 +38,16 @@ namespace ArchiveUpload.Repository
                 _db.SaveChanges();
             }
         }
+        public List<docs2> GetAllDocu()
+        {
+            var docs = _db.docs2.ToList();
+            return docs;
+        }
+
+        public void InsertDocu(docs2 doc)
+        {
+            _db.docs2.Add(doc);
+            _db.SaveChanges();
+        }
     }
 }

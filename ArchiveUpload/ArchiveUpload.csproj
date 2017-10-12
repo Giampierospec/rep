@@ -155,6 +155,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\docs2.cs">
+      <DependentUpon>Documents.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Documento.cs">
       <DependentUpon>Documents.tt</DependentUpon>
     </Compile>
@@ -234,6 +237,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Document\Index.cshtml" />
     <Content Include="Views\Document\CreateDoc.cshtml" />
+    <Content Include="Views\Document\Docus.cshtml" />
+    <Content Include="Views\Document\CreateDocu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
